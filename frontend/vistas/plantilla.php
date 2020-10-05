@@ -16,9 +16,11 @@
 
 	<?php
 
+		$servidor = Ruta::ctrRutaServidor();
+
 		$icono = ControladorPlantilla::ctrEstiloPlantilla();
 
-		echo '<link rel="icon" href="http://localhost/ecommerce_php/backend/'.$icono["icono"].'">';
+		echo '<link rel="icon" href="'.$servidor.$icono["icono"].'">';
 
 		/*=============================================
 		MANTENER LA RUTA FIJA DEL PROYECTO
@@ -40,9 +42,13 @@
 
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/cabezote.css">
 
+	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/slide.css">
+
 	<script src="<?php echo $url; ?>vistas/js/plugins/jquery.min.js"></script>
 
 	<script src="<?php echo $url; ?>vistas/js/plugins/bootstrap.min.js"></script>
+
+	<script src="<?php echo $url; ?>vistas/js/plugins/jquery.easing.js"></script>
 
 </head>
 
@@ -112,12 +118,17 @@ if(isset($_GET["ruta"])){
 
 	}
 
+}else{
+
+	include "modulos/slide.php";
+
 }
 
 ?>
 
 <script src="<?php echo $url; ?>vistas/js/cabezote.js"></script>
 <script src="<?php echo $url; ?>vistas/js/plantilla.js"></script>
+<script src="<?php echo $url; ?>vistas/js/slide.js"></script>
 
 </body>
 </html>

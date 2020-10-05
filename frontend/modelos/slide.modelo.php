@@ -2,17 +2,19 @@
 
 require_once "conexion.php";
 
-class ModeloPlantilla{
+class ModeloSlide{
 
-	static public function mdlEstiloPlantilla($tabla){
+	static public function mdlMostrarSlide($tabla){
 
 		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
 
 		$stmt -> execute();
 
-		return $stmt -> fetch();
+		return $stmt -> fetchAll();
 
 		$stmt -> close();
+
+		$stmt = null;
 
 	}
 
