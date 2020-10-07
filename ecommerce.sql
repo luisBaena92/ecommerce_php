@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-10-2017 a las 20:22:21
--- Versión del servidor: 10.1.25-MariaDB
--- Versión de PHP: 7.1.7
+-- Tiempo de generación: 07-10-2020 a las 21:53:45
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.2.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -32,7 +31,7 @@ CREATE TABLE `categorias` (
   `id` int(11) NOT NULL,
   `categoria` text COLLATE utf8_spanish_ci NOT NULL,
   `ruta` text COLLATE utf8_spanish_ci NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -61,7 +60,7 @@ CREATE TABLE `plantilla` (
   `logo` text COLLATE utf8_spanish_ci NOT NULL,
   `icono` text COLLATE utf8_spanish_ci NOT NULL,
   `redesSociales` text COLLATE utf8_spanish_ci NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -74,6 +73,37 @@ INSERT INTO `plantilla` (`id`, `barraSuperior`, `textoSuperior`, `colorFondo`, `
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `slide`
+--
+
+CREATE TABLE `slide` (
+  `id` int(11) NOT NULL,
+  `imgFondo` text COLLATE utf8_spanish_ci NOT NULL,
+  `tipoSlide` text COLLATE utf8_spanish_ci NOT NULL,
+  `imgProducto` text COLLATE utf8_spanish_ci NOT NULL,
+  `estiloImgProducto` text COLLATE utf8_spanish_ci NOT NULL,
+  `estiloTextoSlide` text COLLATE utf8_spanish_ci NOT NULL,
+  `titulo1` text COLLATE utf8_spanish_ci NOT NULL,
+  `titulo2` text COLLATE utf8_spanish_ci NOT NULL,
+  `titulo3` text COLLATE utf8_spanish_ci NOT NULL,
+  `boton` text COLLATE utf8_spanish_ci NOT NULL,
+  `url` text COLLATE utf8_spanish_ci NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `slide`
+--
+
+INSERT INTO `slide` (`id`, `imgFondo`, `tipoSlide`, `imgProducto`, `estiloImgProducto`, `estiloTextoSlide`, `titulo1`, `titulo2`, `titulo3`, `boton`, `url`, `fecha`) VALUES
+(1, 'vistas/img/slide/default/back_default.jpg', 'slideOpcion1', 'vistas/img/slide/slide1/calzado.png', '{\"top\": \"15%\" ,\"right\": \"10%\" ,\"width\": \"45%\", \"left\":\"\"}', '{\"top\": \"20%\" ,\"right\": \"\" ,\"width\": \"40%\", \"left\":\"10%\"}', '{\"texto\": \"Lorem Ipsum\" ,\"color\": \"#333\"}', '{\"texto\": \"Lorem ipsum dolor sit\" ,\"color\": \"#777\"}', '{\"texto\": \"Lorem ipsum dolor sit\" ,\"color\": \"#888\"}', '<button class=\"btn btn-default backColor text-uppercase\">\r\n\r\n							VER PRODUCTO <span class=\"fa fa-chevron-right\"></span>\r\n\r\n							</button>', '#', '2017-10-05 22:13:07'),
+(2, 'vistas/img/slide/default/back_default.jpg', 'slideOpcion2', 'vistas/img/slide/slide2/curso.png', '{\r\n	\"width\": \"30%\",\r\n	\"top\": \"5%\",\r\n	\"left\": \"15%\", \"right\":\"\"\r\n}', '{\r\n	\"width\": \"40%\",\r\n	\"top\": \"15%\",\r\n	\"left\": \"\",\r\n	\"right\": \"15%\"\r\n}', '{\"texto\": \"Lorem Ipsum\" ,\"color\": \"#333\"}', '{\"texto\": \"Lorem ipsum dolor sit\" ,\"color\": \"#777\"}', '{\"texto\": \"Lorem ipsum dolor sit\" ,\"color\": \"#888\"}', '<button class=\"btn btn-default backColor text-uppercase\">\r\n\r\n							VER PRODUCTO <span class=\"fa fa-chevron-right\"></span>\r\n\r\n							</button>', '#', '2019-05-18 13:00:13'),
+(3, 'vistas/img/slide/slide3/fondo2.jpg', 'slideOpcion2', 'vistas/img/slide/slide3/iphone.png', '{\r\n	\"width\": \"35%\",\r\n	\"top\": \"5%\",\r\n	\"left\": \"15%\",\r\n	\"right\": \"\"\r\n}', '{\r\n	\"width\": \"40%\",\r\n	\"top\": \"15%\",\r\n	\"left\": \"\",\r\n	\"right\": \"15%\"\r\n}', '{\"texto\": \"Lorem Ipsum\" ,\"color\": \"#eee\"}', '{\"texto\": \"Lorem ipsum dolor sit\" ,\"color\": \"#ccc\"}', '{\"texto\": \"Lorem ipsum dolor sit\" ,\"color\": \"#aaa\"}', '<button class=\"btn btn-default backColor text-uppercase\">\r\n\r\n							VER PRODUCTO <span class=\"fa fa-chevron-right\"></span>\r\n\r\n							</button>', '#', '2019-05-18 13:00:17'),
+(4, 'vistas/img/slide/slide4/fondo3.jpg', 'slideOpcion1', '', '', '{\r\n	\"width\": \"40%\",\r\n	\"top\": \"20%\",\r\n	\"left\": \"10%\",\r\n	\"right\": \"\"\r\n}', '{\"texto\": \"Lorem Ipsum\" ,\"color\": \"#333\"}', '{\"texto\": \"Lorem ipsum dolor sit\" ,\"color\": \"#777\"}', '{\"texto\": \"Lorem ipsum dolor sit\" ,\"color\": \"#888\"}', '', '', '2017-10-05 22:13:26');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `subcategorias`
 --
 
@@ -82,7 +112,7 @@ CREATE TABLE `subcategorias` (
   `subcategoria` text COLLATE utf8_spanish_ci NOT NULL,
   `id_categoria` int(11) NOT NULL,
   `ruta` text COLLATE utf8_spanish_ci NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -129,6 +159,12 @@ ALTER TABLE `plantilla`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `slide`
+--
+ALTER TABLE `slide`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `subcategorias`
 --
 ALTER TABLE `subcategorias`
@@ -143,16 +179,25 @@ ALTER TABLE `subcategorias`
 --
 ALTER TABLE `categorias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT de la tabla `plantilla`
 --
 ALTER TABLE `plantilla`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `slide`
+--
+ALTER TABLE `slide`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT de la tabla `subcategorias`
 --
 ALTER TABLE `subcategorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

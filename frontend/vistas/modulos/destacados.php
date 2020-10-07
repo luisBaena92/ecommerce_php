@@ -62,7 +62,7 @@ VITRINA DE PRODUCTOS GRATIS
 		<!--=====================================
 		VITRINA DE PRODUCTOS EN CUADRICULA
 		======================================-->
-		<ul class="grid0">
+		<ul class="grid0" style="display: none;">
 			<!-- PRODUCTO 1 -->
 			<li class="col-md-3 col-sm-6 col-xs-12">
 				<figure>
@@ -205,6 +205,154 @@ VITRINA DE PRODUCTOS GRATIS
 			</li>
 		</ul>
 
+		<!--=====================================
+		VITRINA DE PRODUCTOS EN LISTA
+		======================================-->
+		<ul class="list0">
+			<!-- PRODUCTO 1 -->
+			<li class="col-xs-12">
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+					<a href="#" class="pixelProducto"><img src="http://localhost/ecommerce_php/backend/vistas/img/productos/accesorios/accesorio04.jpg" alt="" class="img-responsive">
+					</a>
+				</div>
+				<!--===================================== -->
+				<div class="col-lg-10 col-md-7 col-sm-8 col-xs-12">
+					<h1>
+						<small>
+							<a href="#" class="pixelProducto">Collar de diamante</a>	
+						</small>	
+					</h1>
+					<p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Optio dolorum doloribus quam maxime ipsam sunt neque velit aperiam tenetur autem, voluptatem accusantium odit. Tempora aut iure ipsa iste maiores error.</p>
+					<h2><small>GRATIS</small></h2>
+					
+					<div class="btn-group pull-left enlaces">
+						<button type="button" class="btn btn-default btn-xs deseos" idProducto="470" data-toggle="tooltip" title="Agregar a mi lista de deseos">
+							<i class="fa fa-heart" aria-hidden="true"></i>
+						</button>
+						<a href="#" class="pixelProducto">
+							<button type="button" class="btn btn-default btn-xs" data-toogle="tooltip" title="Ver producto">
+								<i class="fa fa-eye" aria-hidden="true"></i>
+							</button>
+						</a>
+					</div>
+				
+					
+				</div>
+					<!--===================================== -->
+				<div class="col-xs-12">
+					<hr>
+				</div>
+
+			</li>
+
+			<!-- PRODUCTO 2 -->
+			<li class="col-xs-12">
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+					<a href="#" class="pixelProducto"><img src="http://localhost/ecommerce_php/backend/vistas/img/productos/accesorios/accesorio03.jpg" alt="" class="img-responsive">
+					</a>
+				</div>
+				<!--===================================== -->
+				<div class="col-lg-10 col-md-7 col-sm-8 col-xs-12">
+					<h1>
+						<small>
+							<a href="#" class="pixelProducto">Bolso Deportivo Gris</a>	
+						</small>	
+					</h1>
+					<p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Optio dolorum doloribus quam maxime ipsam sunt neque velit aperiam tenetur autem, voluptatem accusantium odit. Tempora aut iure ipsa iste maiores error.</p>
+					<h2><small>GRATIS</small></h2>
+					
+					<div class="btn-group pull-left enlaces">
+						<button type="button" class="btn btn-default btn-xs deseos" idProducto="470" data-toggle="tooltip" title="Agregar a mi lista de deseos">
+							<i class="fa fa-heart" aria-hidden="true"></i>
+						</button>
+						<a href="#" class="pixelProducto">
+							<button type="button" class="btn btn-default btn-xs" data-toogle="tooltip" title="Ver producto">
+								<i class="fa fa-eye" aria-hidden="true"></i>
+							</button>
+						</a>
+					</div>
+				
+					
+				</div>
+					<!--===================================== -->
+				<div class="col-xs-12">
+					<hr>
+				</div>
+
+			</li>
+
+			<!-- PRODUCTO 3 -->
+			<li class="col-xs-12">
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+					<a href="#" class="pixelProducto"><img src="http://localhost/ecommerce_php/backend/vistas/img/productos/accesorios/accesorio02.jpg" alt="" class="img-responsive">
+					</a>
+				</div>
+				<!--===================================== -->
+				<div class="col-lg-10 col-md-7 col-sm-8 col-xs-12">
+					<h1>
+						<small>
+							<a href="#" class="pixelProducto">Bolso Militar</a>	
+						</small>	
+					</h1>
+					<p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Optio dolorum doloribus quam maxime ipsam sunt neque velit aperiam tenetur autem, voluptatem accusantium odit. Tempora aut iure ipsa iste maiores error.</p>
+					<h2><small>GRATIS</small></h2>
+					
+					<div class="btn-group pull-left enlaces">
+						<button type="button" class="btn btn-default btn-xs deseos" idProducto="470" data-toggle="tooltip" title="Agregar a mi lista de deseos">
+							<i class="fa fa-heart" aria-hidden="true"></i>
+						</button>
+						<a href="#" class="pixelProducto">
+							<button type="button" class="btn btn-default btn-xs" data-toogle="tooltip" title="Ver producto">
+								<i class="fa fa-eye" aria-hidden="true"></i>
+							</button>
+						</a>
+					</div>
+				
+					
+				</div>
+					<!--===================================== -->
+				<div class="col-xs-12">
+					<hr>
+				</div>
+
+			</li>
+			<!-- PRODUCTO 3 -->
+			<li class="col-xs-12">
+				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+					<a href="#" class="pixelProducto"><img src="http://localhost/ecommerce_php/backend/vistas/img/productos/accesorios/accesorio01.jpg" alt="" class="img-responsive">
+					</a>
+				</div>
+				<!--===================================== -->
+				<div class="col-lg-10 col-md-7 col-sm-8 col-xs-12">
+					<h1>
+						<small>
+							<a href="#" class="pixelProducto">Pulcera de diamantes</a>	
+						</small>	
+					</h1>
+					<p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Optio dolorum doloribus quam maxime ipsam sunt neque velit aperiam tenetur autem, voluptatem accusantium odit. Tempora aut iure ipsa iste maiores error.</p>
+					<h2><small>GRATIS</small></h2>
+					
+					<div class="btn-group pull-left enlaces">
+						<button type="button" class="btn btn-default btn-xs deseos" idProducto="470" data-toggle="tooltip" title="Agregar a mi lista de deseos">
+							<i class="fa fa-heart" aria-hidden="true"></i>
+						</button>
+						<a href="#" class="pixelProducto">
+							<button type="button" class="btn btn-default btn-xs" data-toogle="tooltip" title="Ver producto">
+								<i class="fa fa-eye" aria-hidden="true"></i>
+							</button>
+						</a>
+					</div>
+				
+					
+				</div>
+					<!--===================================== -->
+				<div class="col-xs-12">
+					<hr>
+				</div>
+
+			</li>
+		</ul>	
+
 	</div>
 </div>
 
@@ -269,7 +417,7 @@ VITRINA DE PRODUCTOS MAS VENDIDOS
 		<!--=====================================
 		VITRINA DE PRODUCTOS EN CUADRICULA
 		======================================-->
-		<ul class="grid1">
+		<ul class="grid1" style="display:none">
 			<!-- PRODUCTO 1 -->
 			<li class="col-md-3 col-sm-6 col-xs-12">
 				<figure>
