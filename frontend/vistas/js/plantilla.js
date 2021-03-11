@@ -2,6 +2,10 @@
 PLANTILLA
 =============================================*/
 
+/*herramienta tooltip */
+
+$('[data-toggle="tooltip"]').tooltip();
+
 $.ajax({
 
 	url:"ajax/plantilla.ajax.php",

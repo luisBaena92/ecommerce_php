@@ -34,7 +34,7 @@ class ControladorProductos{
 	MOSTRAR PRODUCTOS
 	=============================================*/
 
-	static public function ctrMostrarProductos($ordenar, $item, $valor){
+	static public function ctrMostrarProductos($ordenar,$item,$valor){
 
 		$tabla = "productos";
 
